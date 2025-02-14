@@ -1,0 +1,4 @@
+export const TRANSACTION_TYPES = {
+  PURCHASE: 'PURCHASE',
+  SALE: 'SALE'
+};
