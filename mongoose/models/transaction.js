@@ -24,7 +24,7 @@ TransactionSchema.methods.isOwner = function (user) {
   return this.userId.toString() === user.id;
 };
 
-TransactionSchema.pre('save', function (next) {
+TransactionSchema.pre('save', async function (next) {
   next();
 });
 

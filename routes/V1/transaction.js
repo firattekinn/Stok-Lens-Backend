@@ -31,6 +31,7 @@ router.post("/new", UserMiddleware, async (req, res) => {
     }
 
     const transaction = new Transaction({ ...req.body, userId: req.user.id });
+    await transaction.save()
 
     return GoodRequestResponse({ transaction }, res);
 
